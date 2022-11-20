@@ -17,8 +17,8 @@ RUN apt-get -y update && apt-get -y install \
     libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex \
     texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev \
     libglib2.0-dev libfdt-dev libpixman-1-dev vim cpplint \
-    cmake ninja-build \\
-    && apt clean
+    cmake ninja-build && \
+    apt clean
 
 FROM env AS toolchain
 RUN git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
