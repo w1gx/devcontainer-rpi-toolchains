@@ -2,7 +2,7 @@
 
 VSCode's devcontainers make life a lot easier. Instead of having to set up the development environment every time, the environment resides in a docker container, which is spun up automatically. This way we can focus on coding and not on setting up the environment just right.
 
-For remote work I have my environments running on a Raspberry Pi. Microsoft does not provide any devcontainers for the Raspberry, so I had to build them myself. Depending on the type of project, I use a different decvontainer. While all the containers are stored on the dockerhub, so that I don't have to build them from scratch every time, I keep the original Dockerfiles in this repository, so I can change them if needed.
+For remote work I have my environments running on a Raspberry Pi. Microsoft does not provide any devcontainers for the Raspberry, so I had to build them myself. Depending on the type of project, I use a different decvontainer. While all the containers are stored on the dockerhub so that I don't have to build them from scratch every time, I keep the original Dockerfiles in this repository, so I can change them if needed.
 
 All toolchains are ready to be used within a .devcontainer environment for VS Code, but can also be used stand-alone for testing purposes. Keep in mind that the container contents are destroyed when the container is stopped.
 
@@ -26,6 +26,8 @@ Toolchain for ARM (linux and none-eabi) development. Available on docker hub (hu
 docker build -t rpi-arm-toolchain ./rpi-arm-toolchain
 ```
 
+Caution: The build takes significant time (upwards of 60 minutes).
+
 ### Running the ARM toolchain
 
 ```bash
@@ -48,6 +50,7 @@ Toolchain for RISC-V development (riscv64). Contains not only the toolchain, but
 ```bash
 docker build -t rpi-riscv-toolchain ./rpi-riscv-toolchain
 ```
+Caution: The build takes significant time (upwards of 2 hours).
 
 ### Running the toolchain
 
@@ -75,4 +78,9 @@ $ readelf -A test
 $ qemu-riscv64 -L /opt/riscv/sysroot test 
 # 
 ```
+
+### Licenses
+
+The entire repository is under the MIT 2.0 license (see [LICENSE](./LICENSE)). The [common-debian.sh](./rpi-arm-toolchain/library-scripts/common-debian.sh) scripts  in the library-scripts folder are provided by Microsoft - also under the MIT 2.0 license.
+
 
