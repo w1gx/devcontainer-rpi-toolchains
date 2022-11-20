@@ -41,6 +41,7 @@ Toolchain for RISC-V development (riscv64). Contains not only the toolchain, but
 - gcc (11.3.0)
 - cmake (3.22.1)
 - riscv64-unknown-linux-gnu-gcc (12.2.0)
+- cpplint (1.5.5)
 - python3 (3.10.6)
 - git (2.34.1)
 - qemu-riscv64 (7.2.0)
