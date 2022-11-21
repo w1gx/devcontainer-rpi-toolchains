@@ -15,10 +15,10 @@ RUN yes | unminimize 2>&1 \
 RUN apt-get -y update && apt-get -y install \
     gcc \
     gdb \ 
-    gcc-arm-none-eabi \
-    gdb-arm-none-eabi \
     cmake \ 
     doxygen mscgen \
+    gcc-avr binutils-avr avr-libc gdb-avr \
+    avrdude \
     cpplint \
     ruby \
     pip 
