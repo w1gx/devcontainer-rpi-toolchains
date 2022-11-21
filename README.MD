@@ -108,6 +108,6 @@ docker build -t rpi-avr-toolchain ./rpi-avr-toolchain
 docker run -it rpi-avr-toolchain
 ```
 
-### Licenses
+## Licenses
 
 The entire repository is under the MIT 2.0 license (see [LICENSE](./LICENSE)). The [common-debian.sh](./rpi-arm-toolchain/library-scripts/common-debian.sh) scripts  in the library-scripts folder are provided by Microsoft - also under the MIT 2.0 license.
