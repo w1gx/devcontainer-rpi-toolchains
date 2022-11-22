@@ -35,6 +35,15 @@ docker build -t rpi-arm-toolchain ./rpi-arm-toolchain
 docker run -it rpi-arm-toolchain
 ```
 
+#### Using JLink with the ARM toolchain
+
+JLink is preloaded but not installed in the Docker Container, as it requires privilege mode. If JLink is needed, the following two lines need to be added to the `devcontainer.json` file:
+
+```json
+    "runArgs": ["--privileged"],
+    "postCreateCommand": "dpkg -i /JLink_Linux_arm.deb",
+```
+
 ## RISC-V devcontainer
 
 ### RISC-V toolchain (docker image)
@@ -125,7 +134,8 @@ FROM w1gx/rpi-avr-toolchain:latest
 RUN sudo adduser vscode root
 ```
 
-The **devcontainer.json** file contains the configuration for the dev-container. Important are the references to the Dockerfile above, as well as the remote user. In the example below, the USB port is mounted so that an attached MCU can be programmed:
+The **devcontainer.json** file contains the configuration for the dev-container. Important are the references to the Dockerfile above, as well as the remote user.
+In the example below, the USB port is mounted so that an attached MCU can be programmed:
 
 ```json
 {
@@ -150,7 +160,6 @@ The **devcontainer.json** file contains the configuration for the dev-container.
     ]
 }
 ```
-
 
 ## Licenses
 

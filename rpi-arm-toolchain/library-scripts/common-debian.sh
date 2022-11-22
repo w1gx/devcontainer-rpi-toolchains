@@ -109,6 +109,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         sudo \
         ncdu \
         man-db \
+        udev \
         strace \
         manpages \
         manpages-dev \
