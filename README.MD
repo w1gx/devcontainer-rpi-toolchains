@@ -41,7 +41,7 @@ JLink is preloaded but not installed in the Docker Container, as it requires pri
 
 ```json
     "runArgs": ["--privileged"],
-    "postCreateCommand": "dpkg -i ./JLink_Linux_arm.deb",
+    "postCreateCommand": "dpkg -i /JLink_Linux_arm.deb",
 ```
 
 ## RISC-V devcontainer
