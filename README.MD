@@ -123,6 +123,28 @@ docker build -t rpi-avr-toolchain ./rpi-avr-toolchain
 docker run -it rpi-avr-toolchain
 ```
 
+## ESP32-C3 Devcontainer
+
+### ESP32-C3 toolchain (docker image)
+
+Toolchain for ESP32-C3 (this RISC-V version) development. Available on docker hub (hub.docker.com) as **w1gx/rpi-esp32-c3-toolchain**
+
+- esp-idf for espc3
+- git (2.25.1)
+- python (3.8.10)
+
+### Building the ESP-C3 toolchain
+
+```bash
+docker run -it rpi-esp32-c3-toolchain
+```
+
+### Running the ESP-C3 toolchain
+
+```bash
+docker run -it rpi-esp32-c3-toolchain
+```
+
 ## Devcontainer example
 
 To use these toolchains, the VSCode project needs a `.devcontainer` folder, which contains `devcontainer.json` and a `Dockerfile` files.
