@@ -44,6 +44,46 @@ JLink is preloaded but not installed in the Docker Container, as it requires pri
     "postCreateCommand": "dpkg -i /JLink_Linux_arm.deb",
 ```
 
+## nRFConnect Devcontainer
+
+### nRFConnect Toolchain (docker image)
+
+Toolchain for ARM (linux and none-eabi) development. Available on docker hub (hub.docker.com) as **w1gx/rpi-arm-toolchain**
+
+- gcc (11.3.0)
+- cmake (3.22.1)
+- gcc-arm-none-eabi (10.3.1)
+- gdb-mulitarch (12.1)
+- doxygen (1.9.1)
+- mscgen (0.20)
+- cpplint (1.5.5)
+- ceedling (0.31.1) with Unity (2.5.4)
+- python3 (3.10.6)
+- git (2.34.1)
+- west
+- nrfConnect
+
+#### Building the nRFConnect toolchain
+
+```bash
+docker build -t rpi-nrfconnect-toolchain ./rpi-nrfConnect-toolchain
+```
+
+#### Running the nRFConnect toolchain
+
+```bash
+docker run -it rpi-nrfconnect-toolchain
+```
+
+#### Using JLink with the nRFConnect toolchain
+
+JLink is preloaded but not installed in the Docker Container, as it requires privilege mode. If JLink is needed, the following two lines need to be added to the `devcontainer.json` file:
+
+```json
+    "runArgs": ["--privileged"],
+    "postCreateCommand": "dpkg -i /JLink_Linux_arm.deb",
+```
+
 ## RISC-V devcontainer
 
 ### RISC-V toolchain (docker image)
