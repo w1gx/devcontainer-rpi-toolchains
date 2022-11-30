@@ -48,7 +48,7 @@ JLink is preloaded but not installed in the Docker Container, as it requires pri
 
 ### nRFConnect Toolchain (docker image)
 
-Toolchain for ARM (linux and none-eabi) development. Available on docker hub (hub.docker.com) as **w1gx/rpi-arm-toolchain**
+Toolchain for ARM (linux and none-eabi) development. Available on docker hub (hub.docker.com) as **w1gx/rpi-nrfconnect-toolchain**
 
 - gcc (11.3.0)
 - cmake (3.22.1)
