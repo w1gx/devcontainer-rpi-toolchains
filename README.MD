@@ -21,6 +21,7 @@ Toolchain for ARM (linux and none-eabi) development. Available on docker hub (hu
 - dia (0.97)
 - cpplint (1.5.5)
 - ceedling (0.31.1) with Unity (2.5.4)
+- gcov
 - ninja (1.10.1)
 - python3 (3.10.6)
 - git (2.34.1)
