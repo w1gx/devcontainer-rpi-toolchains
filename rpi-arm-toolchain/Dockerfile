@@ -18,11 +18,12 @@ RUN apt-get -y update && apt-get -y install \
     gcc-arm-none-eabi \
     gdb-arm-none-eabi \
     cmake \ 
-    doxygen mscgen \
+    doxygen mscgen dia \
     cpplint \
     ruby \
     pip \
-    udev 
+    udev \
+    ninja-build
 # Install ceedling
 RUN gem install ceedling
 # Install JLink

@@ -12,14 +12,16 @@ All toolchains are ready to be used within a .devcontainer environment for VS Co
 
 Toolchain for ARM (linux and none-eabi) development. Available on docker hub (hub.docker.com) as **w1gx/rpi-arm-toolchain**
 
-- gcc (11.3.0)
+- gcc (11.4.0)
 - cmake (3.22.1)
 - gcc-arm-none-eabi (10.3.1)
 - gdb-mulitarch (12.1)
 - doxygen (1.9.1)
 - mscgen (0.20)
+- dia (0.97)
 - cpplint (1.5.5)
 - ceedling (0.31.1) with Unity (2.5.4)
+- ninja (1.10.1)
 - python3 (3.10.6)
 - git (2.34.1)
 
@@ -161,6 +163,28 @@ docker build -t rpi-avr-toolchain ./rpi-avr-toolchain
 
 ```bash
 docker run -it rpi-avr-toolchain
+```
+
+## ESP32-C3 Devcontainer
+
+### ESP32-C3 toolchain (docker image)
+
+Toolchain for ESP32-C3 (this RISC-V version) development. Available on docker hub (hub.docker.com) as **w1gx/rpi-esp32-c3-toolchain**
+
+- esp-idf for espc3
+- git (2.25.1)
+- python (3.8.10)
+
+### Building the ESP-C3 toolchain
+
+```bash
+docker run -it rpi-esp32-c3-toolchain
+```
+
+### Running the ESP-C3 toolchain
+
+```bash
+docker run -it rpi-esp32-c3-toolchain
 ```
 
 ## Devcontainer example
